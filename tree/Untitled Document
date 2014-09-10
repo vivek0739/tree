@@ -1,0 +1,14 @@
+//linked list to tree
+struct Tnode *slltobst(struct Lnode **head,int n)
+{
+	if(n<=0) return NULL;
+	struct Tnode *left =slltobst((*head) ,n/2a);
+	struct Tnode *root = newNode((*head)->data);
+	root->left=left;
+	(*head)=(*head)->next;
+	root->right=slltobst(*head,n-n/2-1);
+	return root;
+	
+		
+}
+
